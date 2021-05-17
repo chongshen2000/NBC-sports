@@ -15,7 +15,7 @@ function cart(){
 		$pro_id = $_GET['add_cart'];
 		$check_pro = "select * from cart where product_id='$pro_id'";
 		$run_check = mysqli_query ($con,$check_pro);
-		
+
 			$insert_pro = "insert into cart(product_id,qty) values('$pro_id',1)";
 			$run_pro = mysqli_query($con,$insert_pro);
 			echo "<script>window.open('index.php','_self')</script>";
@@ -60,16 +60,16 @@ function total_price(){
 		$pro_id = $p_price ['product_id']; //from cart table
 	  $pro_qty = $p_price ['qty']; // from cart table
 
-		$pro_price = "select * from products where food_id = '$pro_id'";
+		$pro_price = "select * from products where sport_id = '$pro_id'";
 		$run_pro_price = mysqli_query ($con, $pro_price);
 
 		while ($pp_price = mysqli_fetch_array($run_pro_price)){
 
-			$food_price = array ($pp_price ['food_price']);
-			$single_price = $pp_price ['food_price'];
-			$foods_price = $single_price * $pro_qty;
-			$values = array_sum($food_price);
-			  $total += $foods_price;
+			$sport_price = array ($pp_price ['sport_price']);
+			$single_price = $pp_price ['sport_price'];
+			$sports_price = $single_price * $pro_qty;
+			$values = array_sum($sport_price);
+			  $total += $sports_price;
 		}
 	}
 	echo "RM" . $total  ;
@@ -108,11 +108,11 @@ function getPro(){
 
 	while($row_pro=mysqli_fetch_array($run_pro)){
 
-			 $pro_id = $row_pro ['food_id'];
-			 $pro_title = $row_pro ['food_name'];
-			 $pro_image = $row_pro ['food_image'];
-			 $pro_price = $row_pro ['food_price'];
-			 $pro_cat = $row_pro ['food_category'];
+			 $pro_id = $row_pro ['sport_id'];
+			 $pro_title = $row_pro ['sport_name'];
+			 $pro_image = $row_pro ['sport_image'];
+			 $pro_price = $row_pro ['sport_price'];
+			 $pro_cat = $row_pro ['sport_category'];
 
 			 echo "
  	      <div id= 'single_product'>
@@ -133,7 +133,7 @@ function getCatPro(){
 		$cat_title=$_GET['cat'];
 	global $con;
 
-	$get_cat_pro = "select * from products where food_category='$cat_title'";
+	$get_cat_pro = "select * from products where sport_category='$cat_title'";
 	$run_cat_pro = mysqli_query ($con, $get_cat_pro);
 	$count_cats = mysqli_num_rows($run_cat_pro);
 
@@ -144,11 +144,11 @@ function getCatPro(){
 
 	while ($row_cat_pro=mysqli_fetch_array($run_cat_pro)){
  //use msql name
-		$pro_id = $row_cat_pro ['food_id'];
-		$pro_title = $row_cat_pro ['food_name'];
-		$pro_image =$row_cat_pro ['food_image'];
-		$pro_price =$row_cat_pro ['food_price'];
-		$pro_cat = $row_cat_pro ['food_category'];
+		$pro_id = $row_cat_pro ['sport_id'];
+		$pro_title = $row_cat_pro ['sport_name'];
+		$pro_image =$row_cat_pro ['sport_image'];
+		$pro_price =$row_cat_pro ['sport_price'];
+		$pro_cat = $row_cat_pro ['sport_category'];
 
 		echo "
 		<div id= 'single_product'>
@@ -163,7 +163,7 @@ function getCatPro(){
 }
 
 
-//display 9 best-seller food
+//display 9 best-seller sport
 function getBest(){
   if(!isset($_GET['cat'])){
   global $con;
@@ -174,21 +174,21 @@ function getBest(){
   while($row_pro=mysqli_fetch_array($run_pro)){
     $pro_id = $row_pro['pro_id'];
 
-    $sel_f= "select * from products where food_id = '$pro_id'";
+    $sel_f= "select * from products where sport_id = '$pro_id'";
     $run_f = mysqli_query($con, $sel_f);
     while ($row_r=mysqli_fetch_array($run_f)){
 
-      $food_title = $row_r['food_name'];
-      $pro_image = $row_r['food_image'];
-      $pro_price = $row_r ['food_price'];
-      $pro_cat = $row_r ['food_category'];
+      $sport_title = $row_r['sport_name'];
+      $pro_image = $row_r['sport_image'];
+      $pro_price = $row_r ['sport_price'];
+      $pro_cat = $row_r ['sport_category'];
       $i++;
 
       echo "
        <div id= 'single_product'>
        <p>$i </p>
          <img src='admin/product_images/$pro_image'width='150'height='180' />
-         <a href='details.php?pro_id=$pro_id' > <p>$food_title</p></a>
+         <a href='details.php?pro_id=$pro_id' > <p>$sport_title</p></a>
          <p><b> RM $pro_price </b></p>
          <a href='index.php?add_cart=$pro_id'><button style ='float:right;' > Add to Cart</button></a>
        </div>
