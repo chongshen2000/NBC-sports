@@ -90,8 +90,8 @@ function getCat(){
 
 	while ($row_cat=mysqli_fetch_array($run_cat)){
 
-		$cat_id = $row_cat {'cat_id'};
-		$cat_title = $row_cat{'cat_title'};
+		$cat_id = $row_cat ['cat_id'];
+		$cat_title = $row_cat['cat_title'];
 	 echo"<li><a href='index.php?cat=$cat_title'>$cat_title</a></li>";
 
 	}
@@ -190,9 +190,9 @@ function getBest(){
 
       echo "
        <div id= 'single_product'>
-     
+
          <img src='admin/product_images/$pro_image'width='150'height='170' />
-         <a href='details.php?pro_id=$pro_id' > <p>$sport_title</p></a>			 
+         <a href='details.php?pro_id=$pro_id' > <p>$sport_title</p></a>
          <p><b> RM $pro_price </b></p>
          <a href='index.php?add_cart=$pro_id'><button class ='margin-top' > Add to Cart</button></a>
        </div>

@@ -21,6 +21,7 @@ time, mark, audio, video {
 	border: 0;
 
 	vertical-align: baseline;
+	/* height:  */
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -29,7 +30,13 @@ footer, header, hgroup, menu, nav, section {
 }
 
 
-body {background:white;}
+body{
+	background-image: url('../images/background.jfif') !important;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+}
 
 .main_wrapper{
 width: 1000px;
@@ -151,12 +158,12 @@ height:300px;
 
 #content_area .products_box {
 	float: left;
-	margin: 7px;;
-	width: 760px;
+	width: 781px;
 	height: 500px;
-	padding: 7px;
+	padding: 14px;
 	boorder: 2px solid #333;
 	display: inline-table;
+	background-color: white;
 }
 
 /*box for display single product*/
@@ -225,7 +232,7 @@ float: right;
   position: relative;
   display: inline-block;
   width: 100%;
- 
+
 }
 
 .sidebar-navigation li a {
@@ -240,7 +247,7 @@ float: right;
   background-color: #008;
   position: absolute;
   content: '';
-  height: 100%;
+  height: auto;
   left: 0;
   top: 0;
   -webkit-transition: width 0.2s ease-in;
@@ -269,8 +276,8 @@ float: right;
 .sidebar-container {
 
  width: 219px;
-  height: 137%;
-
+  height: 100%;
+	bottom: 0;
 float:left;
   background: #1a1a1a;
   color: #fff;

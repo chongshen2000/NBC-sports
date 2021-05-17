@@ -3,7 +3,7 @@
 session_start();
 include("functions/functions.php");
  ?>
- <!-- hi -->
+
 
 <html>
 <body background="images/maxresdefault.jpg">
