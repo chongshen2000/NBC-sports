@@ -91,18 +91,18 @@ session_start();
             $price = $row_summary['price'];
 
 
-            $get_pro = "select * from products where food_id = '$pro_id'";
+            $get_pro = "select * from products where sport_id = '$pro_id'";
             $run_pro = mysqli_query ($con, $get_pro);
 
             while ($row_pro = mysqli_fetch_array($run_pro)){
 
-              $food_price = array ($row_pro ['food_price']); //put price into $food_price
-              $food_title = $row_pro ['food_name'];
-              $food_image = $row_pro ['food_image'];
-              $single_price = $row_pro ['food_price'];
-              $foods_price = $single_price * $pro_qty;
-              $values = array_sum ($food_price);
-              $total += $foods_price;
+              $sport_price = array ($row_pro ['sport_price']); //put price into $sport_price
+              $sport_title = $row_pro ['sport_name'];
+              $sport_image = $row_pro ['sport_image'];
+              $single_price = $row_pro ['sport_price'];
+              $sports_price = $single_price * $pro_qty;
+              $values = array_sum ($sport_price);
+              $total += $sports_price;
               $discount_price = $total * .10;
               $promotion_price = $total - $discount_price;
               $i++;
@@ -110,11 +110,11 @@ session_start();
 
             <tr align="center">
              <td><?php echo $i;?></td>
-           <td><input type="hidden" name="update[]" value="<?php echo $pro_id;?>"/><?php echo $food_title; ?><br><img src="../admin/product_images/<?php echo $food_image;?>" width="60" height="60"/>
+           <td><input type="hidden" name="update[]" value="<?php echo $pro_id;?>"/><?php echo $sport_title; ?><br><img src="../admin/product_images/<?php echo $sport_image;?>" width="60" height="60"/>
            </td>
            <td><?php echo $pro_qty;?></td>
            <td><?php echo "RM " . $single_price; ?></td>
-           <td><?php echo "RM " . $foods_price; ?>0</td>
+           <td><?php echo "RM " . $sports_price; ?>0</td>
            </tr>
 
 
