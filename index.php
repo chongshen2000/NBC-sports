@@ -3,6 +3,7 @@
 session_start();
 include("functions/functions.php");
  ?>
+ <!-- hi -->
 
 <html>
 <body background="images/maxresdefault.jpg">
@@ -26,12 +27,12 @@ include("functions/functions.php");
     <!--Header ends here-->
 
     <!--Navagation Bar starts here-->
-   
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
   <a class="navbar-brand" href="index.php">Home</a>
    <div class="collapse navbar-collapse" id="navbarText">
   <ul class="navbar-nav mr-auto">
-      
+
       <li class="nav-item">
         <a class="nav-link" href="all_products.php">All Products</a>
       </li>
