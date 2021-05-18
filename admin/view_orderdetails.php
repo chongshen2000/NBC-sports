@@ -10,7 +10,7 @@ session_start();
   <head>
       <link rel="stylesheet" href="styles/styles.css" media="all" />
 
-<body background="images/maxresdefault.jpg">
+<body background="images/background.jpg">
 
   <div class="main_wrapper">
 

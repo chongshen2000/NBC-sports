@@ -4,7 +4,7 @@ session_start();
 
 <!DOCTYPE>
 <html>
-<body background="images/maxresdefault.jpg">
+<body background="images/background.jpg">
 
   <head>
     <title>Login Form</title>

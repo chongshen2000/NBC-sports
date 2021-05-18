@@ -1,6 +1,6 @@
 <!DOCTYPE>
 <html>
-<body background="images/maxresdefault.jpg">
+<body background="images/background.jpg">
 <br><br>
 
 	<div align="center">

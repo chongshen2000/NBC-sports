@@ -1,6 +1,6 @@
 <!DOCTYPE>
 <html>
-<body background="images/maxresdefault.jpg">
+<body background="images/background.jpg">
 <h2 style="color:skyblue">Year :
 <?php
 $ye=$_POST['year'];

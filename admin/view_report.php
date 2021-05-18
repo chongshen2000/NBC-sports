@@ -1,6 +1,6 @@
 <!DOCTYPE>
 <html>
-<body background="images/maxresdefault.jpg">
+<body background="images/background.jpg">
 
 <form width="795" align="center" bgcolor="yellow">
 <div>
