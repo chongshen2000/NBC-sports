@@ -1,6 +1,6 @@
 <!DOCTYPE>
 <html>
-<body background="images/maxresdefault.jpg">
+<body background="images/background.jpg">
 			<div>
 			<h2 style="color:skyblue">Date :
 			<?php
