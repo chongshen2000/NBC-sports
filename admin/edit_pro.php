@@ -82,7 +82,7 @@ if (isset($_GET['edit_pro'])) {
               else
                 $option_sel = ' ';
 
-              echo "<option value='$cat_title' $option_sel>$cat_title</option>";
+              echo "<option value='$cat_id' $option_sel>$cat_title</option>";
             }
 
             ?>
