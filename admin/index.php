@@ -1,7 +1,8 @@
 <?php
 session_start();
 if (!isset($_SESSION['admin_email'])) {
-  echo "<script>window.open('login.php?not_amin=You are not an Admin!','_self')</script>";
+  // echo "<script>window.open('login.php?not_amin=You are not an Admin!','_self')</script>";
+  echo "<script>window.open('login.php','_self')</script>";
 } else {
 ?>
 

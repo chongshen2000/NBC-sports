@@ -8,11 +8,6 @@
 <body>
 
   <table width="780" align="center" bgcolor="skyblue">
-
-
-
-
-
     <tr align="center">
       <td colspan="7">
         <h1 style="font-family:Comic Sans MS; color:brown;">View All Orders Here</h1>

@@ -1,50 +1,53 @@
 <?php
 include("includes/db.php");
 
-if(isset($_GET['edit_order'])){
+if (isset($_GET['edit_order'])) {
 
   $order_id = $_GET['edit_order'];
 
   $get_order = "select * from ordersdetail where order_id='$order_id'";
 
-  $run_order = mysqli_query($con,$get_order);
+  $run_order = mysqli_query($con, $get_order);
 
   $row_order = mysqli_fetch_array($run_order);
 
   $order_id = $row_order['order_id'];
   $status = $row_order['status'];
-
 }
- ?>
+?>
 
 
-<form action="" method="post" style="padding" >
-
-
-
-              <table width ="600" align="center" bgcolor="skyblue">
-
-                <tr>
-                  <td align="right"><h3><b>Order ID = <?php echo $order_id;?></b></h3><td>
-
-
-                  <td align="right"><h3><b>Edit Status:</b></h3></td>
-                  <td><select name="edit_status" >
-                    <option><?php echo $status;?></option>"
-                    <option>process</option>
-                    <option>done</option>
-                     </td>
-                </tr>
+<form action="" method="post">
 
 
 
-                <br></br>
+  <table width="600" align="center" bgcolor="skyblue">
 
-                <tr align="center" style="padding:20">
-                  <td colspan="4"><input type="submit" name="update_status" value="Update status" /></td>
-                </tr>
+    <tr>
+      <td align="right">
+        <h3><b>Order ID = <?php echo $order_id; ?></b></h3>
+      <td>
 
-              </table>
+
+      <td align="right">
+        <h3><b>Edit Status:</b></h3>
+      </td>
+      <td><select name="edit_status">
+          <option><?php echo $status; ?></option>"
+          <option>process</option>
+          <option>done</option>
+      </td>
+    </tr>
+
+
+
+    <br></br>
+
+    <tr align="center" style="padding:20">
+      <td colspan="4"><input type="submit" name="update_status" value="Update status" /></td>
+    </tr>
+
+  </table>
 
 </form>
 <br>
@@ -53,7 +56,7 @@ if(isset($_GET['edit_order'])){
 
 <?php
 include("includes/db.php");
-  if(isset($_POST['update_status'])){
+if (isset($_POST['update_status'])) {
 
   $update_id = $order_id;
 
@@ -61,13 +64,13 @@ include("includes/db.php");
 
   $update_status = "update ordersdetail set status='$edit_status' where order_id='$order_id'";
 
-  $run_status = mysqli_query($con,$update_status);
+  $run_status = mysqli_query($con, $update_status);
 
-  if($run_status){
+  if ($run_status) {
     echo "<script>alert('The status has been updated!')</script>";
     echo "<script>window.open('index.php?view_orders','_self')</script>";
   }
 }
 
 
- ?>
+?>
