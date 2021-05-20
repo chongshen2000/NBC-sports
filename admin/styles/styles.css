@@ -106,7 +106,7 @@ section {
 }
 
 body {
-  background-image: url("");
+  background-image: url("../images/background.jfif");
 }
 
 .main_wrapper {
@@ -289,7 +289,7 @@ body {
   width: 1000px;
   height: 40px;
   float: right;
-  colour: white;
+  color: white;
   background: yellow;
 }
 
