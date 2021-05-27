@@ -4,7 +4,7 @@
 
 <head>
   <title> NBC sports/cart </title>
-  <link rel="stylesheet" href="./payment.css" media="all" />
+  <link rel="stylesheet" href="./styles/payment.css" media="all" />
   <link rel="stylesheet" href="./styles/bootstrap/css/bootstrap.min.css" />
   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
   <script src="styles/bootstrap/js/bootstrap.min.js"></script>
