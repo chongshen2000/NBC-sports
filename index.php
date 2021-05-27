@@ -88,7 +88,7 @@ include("functions/functions.php");
 
 
         <div id="shopping_cart">
-          <span style="float:left; font-size:16px; padding:5px; line-height:30px;">
+          <span style="color: black;float:left; font-size:16px; padding:5px; line-height:30px;">
             <?php
             if (isset($_SESSION['user_email'])) {
               $u_email = $_SESSION['user_email'];
