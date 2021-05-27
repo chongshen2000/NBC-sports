@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (empty($_SESSION['user_email'])) {
+  echo "<script>window.open('./index.php','_self')</script>";
+}
+?>
+
 <!DOCTYPE html>
 
 <html>
