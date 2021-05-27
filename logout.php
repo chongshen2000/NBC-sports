@@ -8,6 +8,3 @@ $delete_cart ="delete from cart";
 $run_delete = mysqli_query($con,$delete_cart);
 
 echo "<script>window.open('index.php','_self')</script>";
-
-
-?>
