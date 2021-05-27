@@ -227,10 +227,11 @@ body {
   text-decoration: underline;
 }
 
-#content_area .products_box {
+/* #content_area  */
+.products_box {
   float: left;
   width: 781px;
-  height: 500px;
+  height: 500px !important;
   padding: 14px;
   border: 2px solid #333;
   display: inline-table;

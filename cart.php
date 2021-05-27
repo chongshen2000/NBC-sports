@@ -180,7 +180,7 @@ include("functions/functions.php");
                 <td><input type="submit" name="remove_pro" value="Remove" /></td>
                 <td><input type="submit" name="continue" value="Continue Shopping" /></td>
                 <td><input type="submit" name="update_cart" value="Update quantity" /></td>
-                <td colspan="2"><button><a href="checkout.php" style="text-decoration:none;">Checkout</a></button></td>
+                <td colspan="2"><button><a href="./payment.php" style="text-decoration:none;">Checkout</a></button></td>
               </tr>
 
             </table>

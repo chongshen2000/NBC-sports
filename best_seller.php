@@ -8,7 +8,7 @@ include("functions/functions.php");
 
 <head>
   <title> NBC sports/best seller </title>
-  <link rel="stylesheet" href="styles/styles.css" media="all" />
+  <link rel="stylesheet" href="./styles/styles.css" media="all" />
   <link rel="stylesheet" href="styles/bootstrap/css/bootstrap.min.css" />
   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
   <script src="styles/bootstrap/js/bootstrap.min.js"></script>
@@ -73,7 +73,7 @@ include("functions/functions.php");
 
 
       <div id="shopping_cart">
-        <span style="float:left; font-size:16px; padding:5px; line-height:30px;">
+        <span style="color: black; float:left; font-size:16px; padding:5px; line-height:30px;">
           <?php
           if (isset($_SESSION['user_email'])) {
             $u_email = $_SESSION['user_email'];

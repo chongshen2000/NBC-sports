@@ -3,6 +3,8 @@ session_start();
 if (empty($_SESSION['user_email'])) {
   echo "<script>window.open('./index.php','_self')</script>";
 }
+include("functions/functions.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -94,12 +96,43 @@ if (empty($_SESSION['user_email'])) {
             <b>4</b>
           </span>
         </h4>
-        <p><a href="#">Product 1</a> <span class="price">$?</span></p>
-        <p><a href="#">Product 2</a> <span class="price">$?</span></p>
-        <p><a href="#">Product 3</a> <span class="price">$?</span></p>
-        <p><a href="#">Product 4</a> <span class="price">$?</span></p>
+        <?php
+        $total = 0;
+        $promotion_price = 0;
+        //declare data from cart table
+        global $con;
+        $sel_price = "select * from cart";
+        $run_price = mysqli_query($con, $sel_price);
+        while ($p_price = mysqli_fetch_array($run_price)) {
+
+          $pro_id = $p_price['product_id']; //from cart table
+          $pro_qty = $p_price['qty']; // from cart table
+
+          //declare data from products table
+          $pro_price = "select * from products where sport_id = '$pro_id'";
+          $run_pro_price = mysqli_query($con, $pro_price);
+
+          while ($pp_price = mysqli_fetch_array($run_pro_price)) {
+
+            $sport_price = array($pp_price['sport_price']); //put price into $sport_price
+            $sport_title = $pp_price['sport_name'];
+            $sport_image = $pp_price['sport_image'];
+            $single_price = $pp_price['sport_price'];
+            $sports_price = $single_price * $pro_qty;
+            $values = array_sum($sport_price);
+            $total += $sports_price;
+            $discount_price = $total * .10;
+            $promotion_price = $total - $discount_price;
+        ?>
+            <p><a href="#"><?php echo $sport_title; ?>(<?php echo $pro_qty; ?>)</a> <span class="price"><?php echo "RM " . $sports_price; ?></span></p>
+        <?php
+          }
+        }
+        ?>
         <hr>
-        <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+        <p>Total <span class="price" style="color:black"><b><?php echo "RM " . $total; ?></b></span></p>
+        <p>Discount (10%) <span class="price" style="color:black"><b><?php echo "RM " . $discount_price; ?></b></span></p>
+        <p>Grand Total <span class="price" style="color:black"><b><?php echo "RM " . $promotion_price; ?></b></span></p>
       </div>
     </div>
   </div>
