@@ -7,7 +7,7 @@ include("functions/functions.php");
 <html>
 
 <head>
-  <title> Lux Restaurant </title>
+  <title> NBC Sports </title>
   <link rel="stylesheet" href="styles/styles.css" media="all" />
   <link rel="stylesheet" href="styles/bootstrap/css/bootstrap.min.css" />
   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
