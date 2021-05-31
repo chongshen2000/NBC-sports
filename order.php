@@ -11,17 +11,12 @@ include("includes/db.php");
 
 <body>
 
-  <div class="main_wrapper">
+  <div class="main_wrapper" style="background-color: white;">
 
     <div class="header_wrapper">
-      <img src="images/1.jpg" style="width:1000px;height:200px">
+      <img src="./images/sports.jpg" style="width:1000px;height:200px">
     </div>
-
     <hr>
-
-
-
-
     <?php
     $t = time();
     $tt = (date("Y-m-d", $t));
@@ -140,7 +135,7 @@ include("includes/db.php");
 
       <tr align="right">
         <td colspan="4"><b>Promotion Price(10%):</b></td>
-        <td><?php echo "RM " . $promotion_price; ?></td>
+        <td><?php echo "RM " . number_format((float)$promotion_price, 2, '.', ''); ?></td>
       </tr>
 
 
