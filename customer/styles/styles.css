@@ -29,12 +29,11 @@ footer, header, hgroup, menu, nav, section {
 }
 
 
-body {background:white;}
-
-.main_wrapper{
-width: 1000px;
-height:auto;
-margin: auto;
+body {
+  background-image: url("./images/background.jfif") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .header_wrapper{
@@ -225,7 +224,7 @@ float: right;
   position: relative;
   display: inline-block;
   width: 100%;
- 
+
 }
 
 .sidebar-navigation li a {
