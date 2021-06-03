@@ -226,7 +226,6 @@ if (isset($_POST['register'])) {
   $u_image = $_FILES['u_image']['name'];
   $u_image_tmp = $_FILES['u_image']['tmp_name'];
 
-  move_uploaded_file($u_image_tmp, "customer/user_images/$u_image");
 
   $insert_u = "select user_email from user where user_email = '$u_email'";
   $run_u = mysqli_query($con, $insert_u);
@@ -234,6 +233,7 @@ if (isset($_POST['register'])) {
   if (mysqli_num_rows($run_u) == 0) {
 
     if ($u_password == $u_password2) {
+      move_uploaded_file($u_image_tmp, "customer/user_images/$u_image");
 
       $insert_u = "insert into user (user_name,user_email,user_pass,user_pass2,user_address,user_state,user_contact,user_image)
         values ('$u_name','$u_email','$u_password','$u_password2','$u_address','$u_state','$u_contact','$u_image')";
