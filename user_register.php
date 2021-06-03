@@ -239,21 +239,24 @@ if (isset($_POST['register'])) {
         values ('$u_name','$u_email','$u_password','$u_password2','$u_address','$u_state','$u_contact','$u_image')";
       $run_u = mysqli_query($con, $insert_u);
 
-      $sel_cart = "select * from cart ";
+      echo "<script>alert('Registration successful! Please login again.')</script>";
+      echo "<script>window.open('./user_register.php','_self')</script>";
 
-      $run_cart = mysqli_query($con, $sel_cart);
+      // $sel_cart = "select * from cart ";
 
-      $check_cart = mysqli_num_rows($run_cart);
+      // $run_cart = mysqli_query($con, $sel_cart);
 
-      if ($check_cart == 0) {
-        $_SESSION['user_email'] = $u_email;
-        echo "<script>alert('Registration successful!')</script>";
-        echo "<script>window.open('customer/my_account.php','_self')</script>";
-      } else {
-        $_SESSION['user_email'] = $u_email;
-        echo "<script>alert('Registration successful!')</script>";
-        echo "<script>window.open('cart.php','_self')</script>";
-      }
+      // $check_cart = mysqli_num_rows($run_cart);
+
+      // if ($check_cart == 0) {
+      //   $_SESSION['user_email'] = $u_email;
+      //   echo "<script>alert('Registration successful!')</script>";
+      //   echo "<script>window.open('customer/my_account.php','_self')</script>";
+      // } else {
+      //   $_SESSION['user_email'] = $u_email;
+      //   echo "<script>alert('Registration successful!')</script>";
+      //   echo "<script>window.open('cart.php','_self')</script>";
+      // }
     } else {
       echo "<script>alert('The password are not confirmed!')</script>";
     }
