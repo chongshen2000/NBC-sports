@@ -110,7 +110,7 @@ include("functions/functions.php");
         <div class="products_box">
 
 
-          <form action="user_register.php" method="post" enctype="multipart/form-data">
+          <form method="POST" enctype="multipart/form-data">
 
             <table width="600" align="center" border="2" bgcolor="grey">
 
@@ -240,7 +240,8 @@ if (isset($_POST['register'])) {
       $run_u = mysqli_query($con, $insert_u);
 
       echo "<script>alert('Registration successful! Please login again.')</script>";
-      echo "<script>window.open('./user_register.php','_self')</script>";
+      echo "<script>window.open('./user_login.php','_self')</script>";
+      // header("Location: ./user.php");
 
       // $sel_cart = "select * from cart ";
 
