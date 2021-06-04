@@ -67,18 +67,18 @@ $contact = $row_user['user_contact'];
               <label for="cname">Name on Card</label>
               <input type="text" id="cname" name="cardname">
               <label for="ccnum">Credit card number</label>
-              <input type="text" id="ccnum" name="cardnumber">
-              <label for="expmonth">Exp Month</label>
-              <input type="text" id="expmonth" name="expmonth">
+              <input type="text" maxlength="16" minlength="16" id="ccnum" name="cardnumber">
+              <!-- <label for="expmonth">Exp Month</label>
+              <input type="text" id="expmonth" name="expmonth"> -->
 
               <div class="row">
                 <div class="col-50">
-                  <label for="expyear">Exp Year</label>
-                  <input type="text" id="expyear" name="expyear">
+                  <label for="expyear">Exp Month & Year</label>
+                  <input type="month" id="expyear" name="expyear" min="2021-06">
                 </div>
                 <div class="col-50">
                   <label for="cvv">CVV</label>
-                  <input type="text" id="cvv" name="cvv">
+                  <input type="text" id="cvv" name="cvv" minlength="3">
                 </div>
               </div>
             </div>

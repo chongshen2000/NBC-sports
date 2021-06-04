@@ -39,7 +39,7 @@ if (!isset($_SESSION['admin_email'])) {
 
         <tr>
           <td align="right"><b>Product Price:</b></td>
-          <td><input type="text" name="product_price" pattern="[0-9.]{1,6}" required /></td>
+          <td><input type="text" name="product_price" pattern="[0-9.]{1,6}" min="1" required /></td>
         </tr>
 
         <tr>
@@ -103,16 +103,27 @@ if (!isset($_SESSION['admin_email'])) {
     $product_image = $_FILES['product_image']['name'];
     $product_image_tmp = $_FILES['product_image']['tmp_name'];
 
-    move_uploaded_file($product_image_tmp, "product_images/$product_image");
+    $query = "SELECT * FROM products WHERE sport_name = '$product_name'";
+    $result = mysqli_query($con, $query);
+    if (mysqli_num_rows($result) >= 1) {
+      echo "<script>alert('The product " . $product_name . " is exist! Please use another name.')</script>";
+      exit();
+    } else if ($product_price < 1) {
+      echo "<script>alert('Minimum price is 1! Please re-enter.')</script>";
+      exit();
+    } else {
 
-    $insert_product = "insert into products (sport_name,description,sport_category,sport_price,sport_image) values
-    ('$product_name','$product_description','$product_cat','$product_price','$product_image')";
+      move_uploaded_file($product_image_tmp, "product_images/$product_image");
 
-    $insert_pro = mysqli_query($con, $insert_product);
-    if ($insert_pro) {
+      $insert_product = "insert into products (sport_name,description,sport_category,sport_price,sport_image) values
+      ('$product_name','$product_description','$product_cat','$product_price','$product_image')";
 
-      echo "<script>alert('Product has been inserted!')</script>";
-      echo "<script>window.open('index.php?insert_product','_self')</script>";
+      $insert_pro = mysqli_query($con, $insert_product);
+      if ($insert_pro) {
+
+        echo "<script>alert('Product has been inserted!')</script>";
+        echo "<script>window.open('index.php?insert_product','_self')</script>";
+      }
     }
   }
 

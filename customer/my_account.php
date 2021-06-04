@@ -90,7 +90,7 @@ include("../functions/functions.php");
           <li><a href="my_account.php?edit_image">Edit Profile Image</a></li>
           <li><a href="my_account.php?edit_account">Edit Account</a></li>
           <li><a href="my_account.php?change_pass">Change Password</a></li>
-          <li><a href="my_account.php?delete_account">Delete Account</a></li>
+          <!-- <li><a href="my_account.php?delete_account">Delete Account</a></li> -->
           <li><a href="../logout.php">Logout</a></li>
         </ul>
 
