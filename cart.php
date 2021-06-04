@@ -180,7 +180,15 @@ include("functions/functions.php");
                 <td><input type="submit" name="remove_pro" value="Remove" /></td>
                 <td><input type="submit" name="continue" value="Continue Shopping" /></td>
                 <td><input type="submit" name="update_cart" value="Update quantity" /></td>
-                <td colspan="2"><button><a href="./payment.php" style="text-decoration:none;">Checkout</a></button></td>
+                <?php
+                $query = "select * from cart";
+                $result = mysqli_query($con, $query);
+                if (mysqli_num_rows($result) > 0) {
+                ?>
+                  <td colspan="2"><button><a href="./payment.php" style="text-decoration:none;">Checkout</a></button></td>
+                <?php
+                }
+                ?>
               </tr>
 
             </table>
@@ -211,11 +219,14 @@ include("functions/functions.php");
             global $con;
 
             if (isset($_POST['remove_pro'])) {
-              foreach ($_POST['remove'] as $remove_id) {
-                $delete_product = "delete from cart where product_id ='$remove_id' ";
-                $run_delete = mysqli_query($con, $delete_product);
-                if ($run_delete) {
-                  echo "<script>window.open('cart.php','_self')</script>";
+              if (!empty($_POST['remove'])) {
+
+                foreach ($_POST['remove'] as $remove_id) {
+                  $delete_product = "delete from cart where product_id ='$remove_id' ";
+                  $run_delete = mysqli_query($con, $delete_product);
+                  if ($run_delete) {
+                    echo "<script>window.open('cart.php','_self')</script>";
+                  }
                 }
               }
             }
