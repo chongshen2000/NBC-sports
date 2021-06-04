@@ -3,31 +3,107 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
 
-	vertical-align: baseline;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
-
 
 body {
   background-image: url("../images/background.jfif") !important;
@@ -36,179 +112,170 @@ body {
   background-attachment: fixed;
 }
 
-.header_wrapper{
+.header_wrapper {
   width: auto;
-  height:auto;
+  height: auto;
   margin: auto;
 }
 
-.menubar{
-	width: 1000px;
-	height: 50px;
-	background:white;
-	color: brown;
+.menubar {
+  width: 1000px;
+  height: 50px;
+  background: white;
+  color: brown;
 }
 
-#menu{
-	padding: 0;
-	margin: 0;
-	line-height: 45px;
-	float: left;
+#menu {
+  padding: 0;
+  margin: 0;
+  line-height: 45px;
+  float: left;
 }
 
 #menu li {
-	list-style: none;
-	display: inline;
+  list-style: none;
+  display: inline;
 }
 
-#menu a{
-	text-decoration: none;
-	color: brown;
-	padding: 3px;
-	margin: 5px;
-	font-size: 18px;
-	font-family: Comic Sans Ms;
+#menu a {
+  text-decoration: none;
+  color: brown;
+  padding: 3px;
+  margin: 5px;
+  font-size: 18px;
+  font-family: Comic Sans Ms;
 }
 
 #menu a:hover {
-	color: orange;
-	font-weight: bolder;
-	text-decoration:underline;
+  color: orange;
+  font-weight: bolder;
+  text-decoration: underline;
 }
 
 #form {
-	float: right;
-	padding-right: 8px;
-	line-height: 50px;
+  float: right;
+  padding-right: 8px;
+  line-height: 50px;
 }
 
-.content_wrapper{
+.content_wrapper {
   width: 1000px;
   height: auto;
   margin: auto;
   background: MistyRose;
 }
 
-
-#content_wrapper{
+#content_wrapper {
   width: 800px;
   float: right;
   background: MistyRose;
 }
 
-#sidebar{
+#sidebar {
   width: 200px;
-	height: 1000px;
+  height: 1000px;
   background: powderblue;
   float: left;
 }
 
-#sidebar_title{
-	background:violet;
-	text-align: center;
-	color: black;
-	font-size: 22px;
-	font-family: arial;
-	padding: 10px;
-	height: 21px;
+#sidebar_title {
+  background: violet;
+  text-align: center;
+  color: black;
+  font-size: 22px;
+  font-family: arial;
+  padding: 10px;
+  height: 21px;
 }
 
-#image{
-background-image: url(source.jpg);
-background-repeat: no-repeat;
-background-size: cover;
-border:5px solid #dedede;
-height:300px;
+#image {
+  background-image: url(source.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 5px solid #dedede;
+  height: 300px;
 }
-
 
 #cats {
-	text-align: center;
+  text-align: center;
 }
 
 #cats li {
-	list-style: none;
-	margin: 10px;
+  list-style: none;
+  margin: 10px;
 }
 
 #cats a {
-	color: black;
-	padding: 15px;
-	text-align: center;
-	font-size: 16px;
-	text-decoration: none;
-	font-family: Comic Sans Ms;
+  color: black;
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+  font-family: Comic Sans Ms;
 }
 
 #cats a:hover {
-	color:blue ;
-	font-weight: bolder;
-	text-decoration: underline;
-
+  color: blue;
+  font-weight: bolder;
+  text-decoration: underline;
 }
 
-
 #content_area .products_box {
-	float: left;
-	margin: 7px;;
-	width: 760px;
-	height: 500px;
-	padding: 7px;
-	boorder: 2px solid #333;
-	display: inline-table;
+  float: left;
+  margin: 7px;
+  width: 760px;
+  height: 500px;
+  padding: 7px;
+  border: 2px solid #333;
+  display: inline-table;
+  background-color: white;
 }
 
 /*box for display single product*/
 #single_product {
-	text-align: center;
-	float:left;
-	width:223px;
-	height: 255px;
-	margin:7px;
-	padding: 7px;
+  text-align: center;
+  float: left;
+  width: 223px;
+  height: 255px;
+  margin: 7px;
+  padding: 7px;
 }
 
 #single_product li {
-			list-style: none;
-			display: inline-grid;;
-		}
+  list-style: none;
+  display: inline-grid;
+}
 
 #shopping_cart {
-width: 781px;
-height:40px;
-float: right;
-colour:white;
-background:#ffffff;
-
+  width: 781px;
+  height: 40px;
+  float: right;
+  color: white;
+  background: #ffffff;
 }
 
-#cart_bar{
-height: 40px;
-width: 900px;
-colour:white;
-background:blue;
-float: right;
-
+#cart_bar {
+  height: 40px;
+  width: 900px;
+  color: white;
+  background: blue;
+  float: right;
 }
-
 
 #desc_box {
-	float: left;
-	width: 700px;
-	height: 300px;
-	margin: 13px;
-	padding: 13px;
-	border: 1px solid #333;
+  float: left;
+  width: 700px;
+  height: 300px;
+  margin: 13px;
+  padding: 13px;
+  border: 1px solid #333;
 }
 
-
-
-#footer{
+#footer {
   width: 1000px;
   height: 50px;
   background: gray;
   clear: both;
-
 }
 
 .sidebar-navigation {
@@ -224,7 +291,6 @@ float: right;
   position: relative;
   display: inline-block;
   width: 100%;
-
 }
 
 .sidebar-navigation li a {
@@ -238,7 +304,7 @@ float: right;
 .sidebar-navigation li::before {
   background-color: #008;
   position: absolute;
-  content: '';
+  content: "";
   height: 100%;
   left: 0;
   top: 0;
@@ -266,23 +332,20 @@ float: right;
 }
 
 .sidebar-container {
-
- width: 219px;
+  width: 219px;
   height: 137%;
 
-float:left;
+  float: left;
   background: #1a1a1a;
   color: #fff;
 }
 
-
-.maincategory{
-	font-size: 25px;
-    text-align: center;
-    padding: 10px;
+.maincategory {
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
 }
 
-.margin-top{
-
-	margin-top: -10px;
+.margin-top {
+  margin-top: -10px;
 }
