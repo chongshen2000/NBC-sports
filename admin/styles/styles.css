@@ -107,6 +107,9 @@ section {
 
 body {
   background-image: url("../images/background.jfif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .main_wrapper {
