@@ -14,7 +14,6 @@
     <th>Category ID</th>
     <th>Category Title</th>
     <th>Edit</th>
-    <th>Delete</th>
   </tr>
 
 
@@ -37,7 +36,7 @@ while ($row_cat = mysqli_fetch_array($run_cat)){
   <td><?php echo $i;?></td>
   <td><?php echo $cat_title;?></td>
   <td><a href="index.php?edit_cats=<?php echo $cat_id;?>">Edit</a></td>
-  <td><a href="delete_cats.php?delete_cats=<?php echo $cat_id;?>">Delete</a></td>
+  <td><a href="delete_cats.php?delete_cats=<?php echo $cat_id;?>"></a></td>
 </tr>
 
 <?php } ?>
