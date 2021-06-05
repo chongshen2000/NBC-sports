@@ -27,7 +27,7 @@ session_start();
     $tt= (date("Y-m-d",$t));
     if(isset($_GET['order_id'])){
     $order_id = $_GET['order_id'];
-    $get_order = "select * from orders AND user where order_id='$order_id' AND orders.user_id = user.user_id";
+    $get_order = "select * from orders, user where order_id='$order_id' AND orders.user_id = user.user_id";
     $run_detail = mysqli_query ($con,$get_order);
     $row_detail = mysqli_fetch_array($run_detail);
 
