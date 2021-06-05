@@ -65,9 +65,9 @@ $contact = $row_user['user_contact'];
                 <i class="fa fa-cc-discover" style="color:orange;"></i>
               </div>
               <label for="cname">Name on Card</label>
-              <input type="text" id="cname" name="cardname">
+              <input type="text" id="cname" name="cardname" required>
               <label for="ccnum">Credit card number</label>
-              <input type="text" maxlength="16" minlength="16" id="ccnum" name="cardnumber">
+              <input type="text" maxlength="16" minlength="16" id="ccnum" name="cardnumber" placeholder="xxxx xxxx xxxx xxxx" required>
               <!-- <label for="expmonth">Exp Month</label>
               <input type="text" id="expmonth" name="expmonth"> -->
 
@@ -78,7 +78,7 @@ $contact = $row_user['user_contact'];
                 </div>
                 <div class="col-50">
                   <label for="cvv">CVV</label>
-                  <input type="text" id="cvv" name="cvv" minlength="3">
+                  <input type="text" id="cvv" name="cvv" minlength="3" placeholder="xxx"required>
                 </div>
               </div>
             </div>
