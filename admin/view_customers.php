@@ -23,7 +23,6 @@
     <th>Image</th>
     <th>Password</th>
     <th>Contact</th>
-    <th>Delete</th>
   </tr>
 
 
@@ -54,7 +53,7 @@ while ($row_u= mysqli_fetch_array($run_u)){
   <td><img src="../customer/user_images/<?php echo $u_image;?>" width="60" height="60"/></td>
   <td><?php echo $u_pass;?></td>
   <td><?php echo $u_contact;?></td>
-  <td><a href="delete_u.php?delete_u=<?php echo $u_id;?>">Delete</a></td>
+  <td><a href="delete_u.php?delete_u=<?php echo $u_id;?>"></a></td>
 </tr>
 
 <?php } ?>
