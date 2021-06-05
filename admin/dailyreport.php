@@ -1,8 +1,8 @@
 <!DOCTYPE>
 <html>
-<body background="images/background.jpg">
+<body background="images/admin.jpg">
 			<div>
-			<h2 style="color:skyblue">Date :
+			<h2 style="color:black">Date :
 			<?php
 			$da=$_POST['date'];
 			$_SESSION['da']=$da;

@@ -1,6 +1,6 @@
 <!DOCTYPE>
 <html>
-<body background="images/background.jpg">
+<body background="images/admin.jpg">
 <br><br></br>
 	<table width="790" align="center" bgcolor="skyblue">
 

@@ -1,7 +1,7 @@
 <!DOCTYPE>
 <html>
-<body background="images/background.jpg">
-<h2 style="color:skyblue">Year :
+<body background="images/admin.jpg">
+<h2 style="color:black">Year :
 <?php
 $ye=$_POST['year'];
 $_SESSION['ye']=$ye;

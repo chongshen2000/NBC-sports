@@ -1,11 +1,11 @@
 <!DOCTYPE>
 <html>
-<body background="images/background.jpg">
+<body background="images/admin.jpg">
 <br><br>
 
 	<div align="center">
 		<tr>
-		<h1 style="color:#ff33ff">Yearly Report</h1>
+		<h1 style="color:black">Yearly Report</h1>
 		<br/>
 			<form method="POST"action="yearlyreport.php">
 

@@ -7,7 +7,7 @@
 		<div>
 
 				<div align="center">
-				<h1 style="text-align:center; color:#ff33ff">Report</h1>
+				<h1 style="text-align:center; color:black">Report</h1>
 				<br><br>
 				<input type="button" name ="daily" value = "Daily" onclick="window.location.href = 'daily.php'"/> <br /><br />
 				<input type="button" name ="monthly" value = "Monthly" onclick="window.location.href = 'monthly.php'"/> <br /><br />

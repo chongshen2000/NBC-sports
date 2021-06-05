@@ -1,10 +1,12 @@
 <!DOCTYPE>
 <html>
-<body background="images/maxresdefault.jpg">
+<body background="images/admin.jpg">
+
+
 <br><br>
 <div align="center">
 	<tr align="center">
-		<h1 style="color:#ff33ff">Daily Report</h1>
+		<h1 style="color:black">Daily Report</h1>
 		<br/>
 			<form method="POST" action="dailyreport.php">
 			<?php

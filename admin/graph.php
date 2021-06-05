@@ -11,7 +11,7 @@ $result1 = mysqli_query($con,$query1);
 ?>
 
 <html>
-<body background="images/maxresdefault.jpg">
+<body background="images/admin.jpg">
 </body>
 <br></br>
                   	<table width="790" align="center" bgcolor=skyblue>

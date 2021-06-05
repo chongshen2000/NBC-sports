@@ -1,14 +1,14 @@
 <!DOCTYPE>
 <html>
-<body background="images/maxresdefault.jpg">
-<h2 style="color:skyblue">Month :
+<body background="images/admin.jpg">
+<h2 style="color:black">Month :
 <?php
 $mo=$_POST['month'];
 $_SESSION['mo']=$mo;
 echo "".$_SESSION['mo']."";
 ?></h2>
 
-<h2 style="color:skyblue">Year :
+<h2 style="color:black">Year :
 <?php
 $ye=$_POST['year'];
 $_SESSION['ye']=$ye;
