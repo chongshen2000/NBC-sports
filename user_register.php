@@ -133,7 +133,7 @@ include("functions/functions.php");
               <tr>
                 <td align="right"><b>Password:</b></td>
 
-                <td><input type="password" name="u_password" min="15" placeholder="minimum 15 character" required /></td>
+                <!-- <td><input type="password" name="u_password" min="15" placeholder="minimum 15 character" required /></td> -->
 
                 <td><input type="password" name="u_password" minlength="15" placeholder="minimum 15 character" required /></td>
 
@@ -142,7 +142,7 @@ include("functions/functions.php");
               <tr>
                 <td align="right"><b>Comfirm Password:</b></td>
 
-                <td><input type="password" name="u_password2" min="15" placeholder="minimum 15 character" required /></td>
+                <!-- <td><input type="password" name="u_password2" min="15" placeholder="minimum 15 character" required /></td> -->
 
                 <td><input type="password" name="u_password2" minlength="15" placeholder="minimum 15 character" required /></td>
 
