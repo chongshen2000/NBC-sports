@@ -26,7 +26,7 @@ session_start();
     $tt= (date("Y-m-d",$t));
     if(isset($_GET['order_id'])){
     $order_id = $_GET['order_id'];
-    $get_order = "select * from orders where order_id='$order_id'";
+    $get_order = "select * from orders AND user where order_id='$order_id' AND orders.user_id = user.user_id";
     $run_detail = mysqli_query ($con,$get_order);
     $row_detail = mysqli_fetch_array($run_detail);
 
@@ -36,7 +36,7 @@ session_start();
     $name = $row_detail ['customer_name'];
     $email = $row_detail ['customer_email'];
     $address = $row_detail ['customer_address'];
-    $state = $row_detail ['customer_state'];
+    $state = $row_detail ['user_state'];
     $contact = $row_detail ['customer_contact'];
 
 
