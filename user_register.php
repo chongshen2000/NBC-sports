@@ -132,20 +132,20 @@ include("functions/functions.php");
 
               <tr>
                 <td align="right"><b>Password:</b></td>
-<<<<<<< HEAD
+
                 <td><input type="password" name="u_password" min="15" placeholder="minimum 15 character" required /></td>
-=======
+
                 <td><input type="password" name="u_password" minlength="15" placeholder="minimum 15 character" required /></td>
->>>>>>> 61a24a050233c5bb513a1379b3d59598cf83065c
+
               </tr>
 
               <tr>
                 <td align="right"><b>Comfirm Password:</b></td>
-<<<<<<< HEAD
+
                 <td><input type="password" name="u_password2" min="15" placeholder="minimum 15 character" required /></td>
-=======
+
                 <td><input type="password" name="u_password2" minlength="15" placeholder="minimum 15 character" required /></td>
->>>>>>> 61a24a050233c5bb513a1379b3d59598cf83065c
+
               </tr>
 
               <tr>
