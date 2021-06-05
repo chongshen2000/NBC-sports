@@ -226,12 +226,13 @@ body {
   text-decoration: underline;
 }
 
-#content_area .products_box {
+#content_area
+.products_box {
   float: left;
-  margin: 7px;
-  width: 760px;
-  height: 500px;
-  padding: 7px;
+  margin: 0px;
+  width: 781px;
+  height: 500px !important ;
+  padding: 14px;
   border: 2px solid #333;
   display: inline-table;
   background-color: white;
@@ -242,7 +243,7 @@ body {
   text-align: center;
   float: left;
   width: 223px;
-  height: 255px;
+  height: 270px;
   margin: 7px;
   padding: 7px;
 }
@@ -311,7 +312,7 @@ body {
   background-color: #008;
   position: absolute;
   content: "";
-  height: 100%;
+  height: auto;
   left: 0;
   top: 0;
   -webkit-transition: width 0.2s ease-in;
@@ -339,8 +340,8 @@ body {
 
 .sidebar-container {
   width: 219px;
-  height: 137%;
-
+  height: 100%;
+  bottom: 0;
   float: left;
   background: #1a1a1a;
   color: #fff;
