@@ -11,7 +11,7 @@ if (!isset($_SESSION['admin_email'])) {
   <html>
 
   <head>
-    <title>This is Admin Panel</title>
+    <title>Admin Panel</title>
     <link rel="stylesheet" href="styles/styles.css" media="all" />
     <link rel="stylesheet" href="styles/bootstrap/css/bootstrap.min.css" />
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
@@ -61,10 +61,14 @@ if (!isset($_SESSION['admin_email'])) {
                           if (!isset($_GET['view_report'])) {
                             if (!isset($_GET['view_orders'])) {
                               if (!isset($_GET['edit_order'])) {
+                                if (!isset($_GET['hide_pro'])) {
+                                  if (!isset($_GET['unhide_pro'])) {
 
 
-                                echo "
+                                    echo "
         <h2 style='padding:10px; text-align:center; color:violet'>Welcome Admin!</h2>";
+                                  }
+                                }
                               }
                             }
                           }
@@ -120,6 +124,15 @@ if (!isset($_SESSION['admin_email'])) {
             if (isset($_GET['edit_order'])) {
 
               include("edit_order.php");
+            }
+
+            if (isset($_GET['hide_pro'])) {
+
+              include("hide_pro.php");
+            }
+            if (isset($_GET['unhide_pro'])) {
+
+              include("unhide_pro.php");
             }
 
 
