@@ -35,7 +35,7 @@ if (isset($_GET['edit_order'])) {
       <td><select name="edit_status">
           <option><?php echo $status; ?></option>"
           <option>process</option>
-          <option>done</option>
+          <option>completed</option>
       </td>
     </tr>
 
