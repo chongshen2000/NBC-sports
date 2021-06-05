@@ -1,6 +1,6 @@
 <html>
 
-              <table width="750" align="center" bgcolor="LavenderBlush" >
+              <table width="600" align="center" bgcolor="LavenderBlush" >
 
               <tr align="center">
                 <td colspan="6"><h2>View Orders Here</h2></td>

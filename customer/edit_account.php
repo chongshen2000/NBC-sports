@@ -19,7 +19,7 @@ $image = $row_user['user_image'];
 
 <form action="" method="post" enctype="multipart/form-data">
 
-  <table width ="750" align="center" border="2" bgcolor="LavenderBlush">
+  <table width ="600" align="center" border="2" bgcolor="LavenderBlush">
 
       <tr align="center">
         <td colspan="5"><h2>Update your account </h2></td>
