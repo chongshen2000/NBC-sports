@@ -11,18 +11,24 @@ if(mysqli_connect_errno())
 //creating the shopping cart
 function cart(){
 		if(isset($_GET['add_cart'])){
-		global $con;
-		$pro_id = $_GET['add_cart'];
-		$check_pro = "select * from cart where product_id='$pro_id'";
-		$run_check = mysqli_query ($con,$check_pro);
-		if(mysqli_num_rows($run_check)>0){
-			echo "<script>alert('Item already added in cart')</script>";//to give message and cannot be added
-		}
-		else{
-			$insert_pro = "insert into cart(product_id,qty) values('$pro_id',1)";
-			$run_pro = mysqli_query($con,$insert_pro);
-			echo "<script>window.open('index.php','_self')</script>";
-		}
+			if (isset($_SESSION['user_email'])) {
+				global $con;
+				$pro_id = $_GET['add_cart'];
+				$check_pro = "select * from cart where product_id='$pro_id'";
+				$run_check = mysqli_query ($con,$check_pro);
+				if(mysqli_num_rows($run_check)>0){
+					echo "<script>alert('Item already added in cart')</script>";//to give message and cannot be added
+				}
+				else{
+					$insert_pro = "insert into cart(product_id,qty) values('$pro_id',1)";
+					$run_pro = mysqli_query($con,$insert_pro);
+					echo "<script>window.open('index.php','_self')</script>";
+				}
+			}else {
+				echo "<script>alert('Please login to add item to cart.')</script>";
+		echo "<script>window.open('./user_login.php','_self')</script>";
+			}
+
 	}
 }
 
