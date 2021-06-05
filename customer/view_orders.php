@@ -15,7 +15,8 @@ session_start();
   <div class="main_wrapper">
 
     <div class="header_wrapper">
-      <img src="images/1.jpg" style="width:1000px;height:200px">
+    <img src="images/sports.jpg" style="width:1000px;height:200px">
+
     </div>
 
     <hr>

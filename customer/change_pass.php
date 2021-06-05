@@ -9,17 +9,17 @@
 
     <tr>
       <td align="right"><b>Enter Current Password:</b></td>
-      <td><input name="current_pass" type="password" min="15" placeholder="minimum 15 characters" required/></td>
+      <td><input name="current_pass" type="password" minlength="15" placeholder="minimum 15 characters" required/></td>
     </tr>
 
     <tr>
       <td align="right"><b>Enter New Password:</b></td>
-      <td><input name="new_pass" type="password" min="15" placeholder="minimum 15 characters" required/></td>
+      <td><input name="new_pass" type="password" minlength="15" placeholder="minimum 15 characters" required/></td>
     </tr>
 
     <tr>
       <td align="right"><b>Reconfirm New Password:</b></td>
-      <td><input name="new_pass_again" type="password" min="15" placeholder="minimum 15 characters" required/></td>
+      <td><input name="new_pass_again" type="password" minlength="15" placeholder="minimum 15 characters" required/></td>
     </tr>
 
     <tr align="center">
