@@ -22,7 +22,6 @@
         <th>Total Price</th>
         <th>Status</th>
         <th>Edit</th>
-        <th>delete</th>
       </tr>
     </div>
 
@@ -56,7 +55,7 @@
         <td>RM<?php echo $total_price; ?></td>
         <td><?php echo $status; ?></td>
         <td><a href="index.php?edit_order=<?php echo $order_id; ?>">Edit</a></td>
-        <td><a href="delete_order.php?delete_order=<?php echo $order_id; ?>">delete</a></td>
+        <td><a href="delete_order.php?delete_order=<?php echo $order_id; ?>"></a></td>
       </tr>
 
     <?php } ?>
