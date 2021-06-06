@@ -16,7 +16,7 @@
 
     <div>
       <tr align="center" style="font-size:24" bgcolor="blue">
-        <th>ID</th>
+
         <th>Order Reference</th>
         <th>Date</th>
         <th>Total Price</th>
@@ -48,7 +48,7 @@
     ?>
 
       <tr align="center" style="font-size:20">
-        <td><?php echo $order_id; ?></td>
+      
 
         <td><a href="view_orderdetails.php?order_id=<?php echo $order_id; ?>"> <?php echo $order_reference; ?></a></td>
         <td><?php echo $date; ?></td>
