@@ -8,7 +8,7 @@ include("includes/db.php");
 
 
 $user = $_SESSION['user_email'];
-$get_user = "select * from user where user_email='$user'";
+$get_user = "SELECT * from user where user_email='$user'";
 $run_user = mysqli_query($con, $get_user);
 $row_user = mysqli_fetch_array($run_user);
 
@@ -78,7 +78,7 @@ $contact = $row_user['user_contact'];
                 </div>
                 <div class="col-50">
                   <label for="cvv">CVV</label>
-                  <input type="text" id="cvv" name="cvv" minlength="3" placeholder="xxx"required>
+                  <input type="text" id="cvv" name="cvv" minlength="3" placeholder="xxx" required>
                 </div>
               </div>
             </div>
@@ -106,7 +106,7 @@ $contact = $row_user['user_contact'];
       $user_address = $_POST['u_address'];
       $user_contact = $_POST['u_contact'];
 
-      $sel_price = "select * from cart";
+      $sel_price = "SELECT * from cart";
       $run_price = mysqli_query($con, $sel_price);
 
       while ($p_price = mysqli_fetch_array($run_price)) {
@@ -115,7 +115,7 @@ $contact = $row_user['user_contact'];
         $pro_qty = $p_price['qty']; // from cart table
 
         //declare data from products table
-        $pro_price = "select * from products where sport_id = '$pro_id'";
+        $pro_price = "SELECT * from products where sport_id = '$pro_id'";
         $run_pro_price = mysqli_query($con, $pro_price);
 
         while ($pp_price = mysqli_fetch_array($run_pro_price)) {
@@ -132,7 +132,7 @@ $contact = $row_user['user_contact'];
 
 
 
-          $insert_detail = "select user_id from orders where user_id = '$user_id'";
+          $insert_detail = "SELECT user_id from orders where user_id = '$user_id'";
           $run_detail = mysqli_query($con, $insert_detail);
 
           $delivery_details = "insert into orders (user_id,customer_name,customer_email,customer_address,customer_contact,date,order_reference,total_price) values
@@ -161,7 +161,7 @@ $contact = $row_user['user_contact'];
         $promotion_price = 0;
         //declare data from cart table
         global $con;
-        $sel_price = "select * from cart";
+        $sel_price = "SELECT * from cart";
         $run_price = mysqli_query($con, $sel_price);
         while ($p_price = mysqli_fetch_array($run_price)) {
 
@@ -169,7 +169,7 @@ $contact = $row_user['user_contact'];
           $pro_qty = $p_price['qty']; // from cart table
 
           //declare data from products table
-          $pro_price = "select * from products where sport_id = '$pro_id'";
+          $pro_price = "SELECT * from products where sport_id = '$pro_id'";
           $run_pro_price = mysqli_query($con, $pro_price);
 
           while ($pp_price = mysqli_fetch_array($run_pro_price)) {
