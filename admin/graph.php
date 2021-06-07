@@ -37,7 +37,7 @@ $result1 = mysqli_query($con, $query1);
   <?php
   include("includes/db.php");
 
-  $get_re = "select *, sum(quantity) AS qtyy from ordersdetail where status='done' group by pro_id order by qtyy desc LIMIT 9 ";
+  $get_re = "select *, sum(quantity) AS qtyy from ordersdetail where status='completeds' group by pro_id order by qtyy desc LIMIT 9 ";
   $run_re = mysqli_query($con, $get_re);
   $i = 0;
 
