@@ -22,7 +22,7 @@
       <th>Image</th>
       <th>Price(RM)</th>
       <th>Edit</th>
-      <th>Hide/Un-hide</th>
+      <th>Status</th>
     </tr>
 
 
